@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.13/vue.js"
+        integrity="sha512-DVdnL1SgeU//B2dtynn5ZdVMkjW/i/cCZRgkaAAl1sQVNVqtMi54Fr6o2tFo7M+3GWGX6VLLhNRRg9oKlMSGBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Cpu3.0Practise</title>
+
+</head>
+
+<body>
+    <div id="Apps">
+        <el-container>
+            <el-header :center="true">
+                <el-row :gutter="20">
+                    <el-col :span="12" :offset="9">
+                        <span style="font-weight:bold; font-size: 25px; color: blue;">
+                            Pallet Weight</span>
+                    </el-col>
+                </el-row>
+            </el-header>
+            <el-main>
+                <el-container>
+                    <el-header>
+                        <p>Pallet Specification</p>
+                    </el-header>
+                    <el-main style="height: 50px;">
+                        <el-row>
+                            <el-col :span="6">
+                                <el-radio v-model="PalletSpecification" label="1">122*102</el-radio>
+                            </el-col>
+                            <el-col :span="6">
+                                <el-radio v-model="PalletSpecification" label="2">100*62</el-radio>
+                            </el-col>
+                            <el-col :span="6">
+                                <el-radio v-model="PalletSpecification" label="3">114*92</el-radio>
+                            </el-col>
+                            <el-col :span="6">
+                                <el-radio v-model="PalletSpecification" label="4">73*40</el-radio>
+                            </el-col>
+                        </el-row>
+                        <el-row>
+                            <el-col :span="6">
+                                <el-radio v-model="PalletSpecification" label="5">122*78</el-radio>
+                            </el-col>
+                            <el-col :span="6">
+                                <el-radio v-model="PalletSpecification" label="6">104*72</el-radio>
+                            </el-col>
+                            <el-col :span="6">
+                                <el-radio v-model="PalletSpecification" label="7">127*100</el-radio>
+                            </el-col>
+                            <el-col :span="6">
+                                <el-radio v-model="PalletSpecification" label="8">43*28</el-radio>
+                            </el-col>
+                        </el-row>
+                    </el-main>
+                </el-container>
+                <div>
+                    <label> Pallet Height(cm):</label>
+                    <el-input :disabled="true"></el-input>
+                </div>
+                <div>
+                    <label> Pallet No:</label>
+                    <el-input :disabled="true"></el-input>
+                </div>
+                <div>
+                    <label> Actual Weight:</label>
+                    <el-input></el-input>
+                </div>
+                <el-row>
+                    <el-col :span="1"><label> X Offset</label></el-col>
+                    <el-col :span="1"><label> Y Offset</label></el-col>
+                </el-row>
+                <textarea></textarea>
+            </el-main>
+
+        </el-container>
+    </div>
+</body>
+<script src="./App.js" type="module"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+</html>
